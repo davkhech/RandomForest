@@ -35,16 +35,13 @@ def different_labels(labels):
 
 
 def split_data(data, feature, value):
-    t = []
-    f = []
+    t, f = [], []
     for row in data:
         if row[feature] >= value:
             t.append(row)
         else:
             f.append(row)
-    t = np.array(t)
-    f = np.array(f)
-    return t, f
+    return np.array(t), np.array(f)
 
 
 def entropy(data):
